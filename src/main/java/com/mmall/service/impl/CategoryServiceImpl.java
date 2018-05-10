@@ -37,6 +37,8 @@ public class CategoryServiceImpl implements ICategoryService {
         category.setParentId(parentId);
         category.setStatus(true);//这个分类是可用的
 
+        
+
         int rowCount = categoryMapper.insert(category);
         if(rowCount > 0){
             return ServerResponse.createBySuccess("添加品类成功");
